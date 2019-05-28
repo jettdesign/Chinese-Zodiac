@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width, maximum-scale=1.0" />
+	<title>Eastern Zodiac</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link href="https://fonts.googleapis.com/css?family=Bungee+Outline" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+	<link rel="stylesheet" href="css/stylesheet.css">
+</head>
+<body id="body">
+	<ul class="topnav" id="myTopnav">
+		<li><a href="index.html">HOMEPAGE</a></li>
+		<li><a id="play_music" onclick="playAudio()">BACKGROUND MUSIC</a></li>
+		<li><a href="#allAnimals">FIND ZODIAC</a></li>
+		<li><a href="help.html">HELP</a></li>
+		<li class="icon">
+			<a href="javascript:void(0);" onclick="navigation()">&#9776;</a>
+		</li>
+	</ul>
+	<header>
+		<h1>Eastern Zodiac</h1>
+		<div class="intro">
+			<div class="the_zodiac">
+				<h1>The Zodiac</h1>
+				<p>The Eastern zodiac is a classification scheme that assigns an animal and its reputed attributes to each year in a repeating 12-year cycle. The 12-year cycle is an approximation to the 11.86-year orbital period of Jupiter, the largest planet of the solar system.</p><br><br>
+				<h2> How to find your Zodiac </h2>
+				<p>You will get to the Zodiac Finder by clicking the button below. Enter your name, date of birth to know your Zodiac Sign!</p></div>
+			</div>
+		
+		<h3><a href="#allAnimals" class="button_find">FIND YOUR ZODIAC</a></h3>
+	</header>
+
+	<main>
+
+		<div id="allAnimals" class="zodiacContainer">
+			<div class="zodiacRow zodiacRow1">
+				<img id="mouse" class="zodiacSymbol" src="images/mouse.png" alt="mouse" onclick="playMouse()">
+				<img id="ox" class="zodiacSymbol" src="images/ox.png" alt="ox">
+				<img id="tiger" class="zodiacSymbol" src="images/tiger.png" alt="tiger">
+				<img id="cat" class="zodiacSymbol" src="images/cat.png" alt="cat">
+				<img id="dragon" class="zodiacSymbol" src="images/dragon.png" alt="dragon">
+				<img id="snake" class="zodiacSymbol" src="images/snake.png" alt="snake">
+			</div>
+			<div class="zodiacRow zodiacRow2">
+				<img id="horse" class="zodiacSymbol" src="images/horse.png" alt="horse">
+				<img id="goat" class="zodiacSymbol" src="images/goat.png" alt="goat">
+				<img id="monkey" class="zodiacSymbol" src="images/monkey.png" alt="monkey">
+				<img id="rooster" class="zodiacSymbol" src="images/rooster.png" alt="rooster">
+				<img id="dog" class="zodiacSymbol" src="images/dog.png" alt="dog">
+				<img id="pig" class="zodiacSymbol" src="images/pig.png" alt="pig">
+			</div>
+		</div>
+
+
+		<div class="formContainer">
+			<div class="formColumn">
+				<form id="formFindZodiac">
+					<input id="inputFirstName" placeholder="FIRST NAME" type="text" name="firstName"><br>
+					<input id="inputLastName" type="text" name="lastName" placeholder="LAST NAME"><br>
+					<input id="inputBirthday" name="birthday" type="date"><br>
+					<input id="inputSubmit" class="submitButton" type="button" name="submit" value="SUBMIT" onclick="findZodiac();">
+				</form>
+			</div>
+			<div id="result" class="resultColumn">
+				<p id="message"></p>
+				<div id="resultZodiac" class="resultZodiacContainer">
+					<img id="resultZodiacMouse" class="resultZodiacSymbol" src="images/mouse.png" alt="mouse">
+					<img id="resultZodiacOx" class="resultZodiacSymbol" src="images/ox.png" alt="ox">
+					<img id="resultZodiacTiger" class="resultZodiacSymbol" src="images/tiger.png" alt="tiger">
+					<img id="resultZodiacCat" class="resultZodiacSymbol" src="images/cat.png" alt="cat">
+					<img id="resultZodiacDragon" class="resultZodiacSymbol" src="images/dragon.png" alt="dragon">
+					<img id="resultZodiacSnake" class="resultZodiacSymbol" src="images/snake.png" alt="snake">
+					<img id="resultZodiacHorse" class="resultZodiacSymbol" src="images/horse.png" alt="horse">
+					<img id="resultZodiacGoat" class="resultZodiacSymbol" src="images/goat.png" alt="goat">
+					<img id="resultZodiacMonkey" class="resultZodiacSymbol" src="images/monkey.png" alt="monkey">
+					<img id="resultZodiacRooster" class="resultZodiacSymbol" src="images/rooster.png" alt="rooster">
+					<img id="resultZodiacDog" class="resultZodiacSymbol" src="images/dog.png" alt="dog">
+					<img id="resultZodiacPig" class="resultZodiacSymbol" src="images/pig.png" alt="pig">
+				</div>	
+			</div>
+		</div>
+
+		
+		<div class="zodiac_bg">
+		</div>
+
+		<div id="zodiacSound">
+			<audio id="s_mouse" src="sounds/mouse.mp3"></audio>
+			<audio id="s_ox" src="sounds/ox.mp3"></audio>
+			<audio id="s_tiger" src="sounds/tiger.mp3"></audio>
+			<audio id="s_cat" src="sounds/cat.mp3"></audio>
+			<audio id="s_dragon" src="sounds/dragon.mp3"></audio>
+			<audio id="s_snake" src="sounds/snake.mp3"></audio>
+			<audio id="s_horse" src="sounds/horse.mp3"></audio>
+			<audio id="s_goat" src="sounds/goat.mp3"></audio>
+			<audio id="s_monkey" src="sounds/monkey.mp3"></audio>
+			<audio id="s_rooster" src="sounds/rooster.mp3"></audio>
+			<audio id="s_dog" src="sounds/dog.mp3"></audio>
+			<audio id="s_pig" src="sounds/pig.mp3"></audio>
+		</div>
+
+		<audio id="s_bg" src="sounds/s_bg.mp3"></audio>
+
+	</main>
+
+	<footer>
+		<h1>Scripting Class 2017</h1>
+	</footer>
+	<script src="script/display.js"></script>
+	
+</body>
+</html>
